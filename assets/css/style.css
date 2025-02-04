@@ -6,6 +6,21 @@
   src: url(../fonts/Aileron.otf)
 }
 
+:root {
+  --color-default: #212529;
+  --color-default-rgb: 0, 98, 95;
+  --color-background: #ffffff;
+  --color-background-rgb: 255, 255, 255;
+  --color-primary: #00625F;
+  --color-primary-rgb: 0, 95, 98;
+  --color-secondary: #32353a;
+  --color-secondary-rgb: 50, 53, 58;
+  --color-box-background: #ffffff;
+  --color-box-background-rgb: 255, 255, 255;
+  --color-inverse: #ffffff;
+  --color-inverse-rgb: 255, 255, 255;
+}
+
 body {
   font-family: Aileron;
   color: #444444;
@@ -553,98 +568,74 @@ section {
 /*--------------------------------------------------------------
 # servicess
 --------------------------------------------------------------*/
-
-
-.servicess .icon-box {
-  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
-  background: #fff;
+.services .service-item {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
-.servicess .icon-box .icon {
-  margin-bottom: 10px;
+.services .service-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(var(--color-default-rgb), 0.1);
 }
 
-.servicess .icon-box .icon img {
-  width: 60px;
-  height: 60px;
-  padding: 5px;
+.services .service-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--color-primary);
+  border-right: 5px solid var(--color-background);
 }
 
-.servicess .icon-box h4 {
-  font-weight: 500;
-  margin-bottom: 15px;
-  font-size: 24px;
+.services .service-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-right: 50px;
+  line-height: 0;
 }
 
-.servicess .icon-box h4 a {
-  color: #14264f;
+.services .service-item img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin-right: 50px;
+  line-height: 0;
+}
+
+.services .service-item .icon {
+  color: rgba(var(--color-default-rgb), 0.7);
+  font-size: 56px;
   transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
 }
 
-.servicess .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.servicess .icon-box:hover {
-  transform: translateY(-10px);
-}
-
-.servicess .icon-box:hover h4 a {
-  color: #47b2e4;
-}
-
-.servicess .social-links {
-  padding-top: 10px;
-  margin: 0 0 40px 0;
-}
-
-.servicess .social-links a {
-  font-size: 25px;
-  display: inline-block;
-  background: #2b6a8f;
-  color: #fff;
-  line-height: 1;
-  padding: 11px 0;
-  margin-right: 10px;
-  border-radius: 50%;
-  text-align: center;
-  width: 50px;
-  height: 50px;
+.services .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background: rgba(var(--color-primary-rgb), 0.3);
+  border-radius: 50px;
+  z-index: 1;
+  bottom: -30px;
+  right: -35px;
   transition: 0.3s;
 }
 
-.servicess .social-links a:hover {
-  background: #133447;
-  color: #fff;
-  text-decoration: none;
-}
-
-.servicess .content ul {
-  list-style: none;
-  padding: 0;
-  line-height: 24px;
-}
-
-.servicess .content ul li {
-  padding-left: 28px;
-  position: relative;
-  font-size: 14px;
-}
-
-.servicess .content ul li+li {
-  margin-top: 10px;
-}
-
-.servicess .content ul i {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 17px;
-  line-height: 1;
+.services .service-item .title {
+  font-weight: 700;
+  font-size: 23px;
+  margin-top: 15px;
 }
 
 /*--------------------------------------------------------------
