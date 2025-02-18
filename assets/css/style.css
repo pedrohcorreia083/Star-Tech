@@ -89,13 +89,40 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Whatsapp
+--------------------------------------------------------------*/
+
+.whatsapp {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  bottom: 15px;
+  right: 15px;
+  z-index: 996;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  transition: all 0.4s;
+}
+
+.whatsapp.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   z-index: 996;
   background: #00625F;

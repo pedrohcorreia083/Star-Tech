@@ -107,6 +107,22 @@
     onscroll(document, toggleBacktotop)
   }
 
+    /**
+   * Back whatsapp
+   */
+    let backwhats = select('.whatsapp')
+    if (backwhats) {
+      const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+          backwhats.classList.add('active')
+        } else {
+          backwhats.classList.remove('active')
+        }
+      }
+      window.addEventListener('load', toggleBacktotop)
+      onscroll(document, toggleBacktotop)
+    }
+
   /**
    * Mobile nav toggle
    */
